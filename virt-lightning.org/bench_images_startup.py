@@ -21,6 +21,7 @@ index_md = pathlib.Path("www/images/index.md")
 
 distros = yaml.safe_load(index_md.open("r"))
 log_dir = pathlib.Path("/tmp/log")
+log_dir.mkdir(parents=True, exist_ok=True)
 local_dir = pathlib.Path("/var/lib/virt-lightning/pool/upstream/")
 
 configuration = Configuration()
